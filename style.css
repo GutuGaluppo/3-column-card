@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+.attribution {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* 
+	================
+		GLOBAL STYLES 
+	================
+*/
+
+:root {
+	--orange: hsl(31, 77%, 52%);
+	--cyan: hsl(184, 100%, 22%);
+	--darkCyan: hsl(179, 100%, 13%);
+
+	--transparentWhite: hsla(0, 0%, 100%, 0.75);
+	--lightGray: hsla(0, 0%, 95%);
+
+	--sedans: url(./images/icon-sedans.svg);
+	--suvs: url(./images/icon-suvs.svg);
+	--luxury: url(./images/icon-luxury.svg);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	font-size: 15px;
+	margin: auto;
+}
+h1 {
+	font-size: 2.5rem;
+	margin: 30px auto;
+}
+p {
+	width: 210px;
+	line-height: 1.6;
+}
+button {
+	position: absolute;
+	bottom: 50px;
+	border: 2px solid var(--lightGray);
+	border-radius: 50px;
+	padding: 12px 28px;
+	font-size: 15px;
+	color: #000;
+	mix-blend-mode: screen;
+}
+button:hover {
+	border: 2px solid var(--lightGray);
+	cursor: pointer;
+	color: var(--lightGray);
+	background: transparent;
+}
+
+/* 
+	================
+		BODY STYLES 
+	================
+*/
+
+.main_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 930px;
+	margin: auto;
+	padding: 30px auto;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.main_container h1 {
+	font-family: "Big Shoulders Display", cursive;
+	text-transform: uppercase;
+}
+
+.card {
+	position: relative;
+	color: var(--lightGray);
+	padding: 50px;
+	height: 500px;
+}
+.icon {
+	height: 40px;
+	background-repeat: no-repeat;
+}
+.icon.sedans {
+	background-image: var(--sedans);
+}
+.icon.suvs {
+	background-image: var(--suvs);
+}
+.icon.luxury {
+	background-image: var(--luxury);
+}
+.card.sedans {
+	background-color: var(--orange);
+}
+.card.suvs {
+	background: var(--cyan);
+}
+.card.luxury {
+	background: var(--darkCyan);
+}
+
+
+@media (max-width: 375px) {
+	.main_container {
+		width: 90%;
+	}
+}
